@@ -1,0 +1,33 @@
+[
+  {
+    "batch": true,
+    "type": "GET",
+    "endpoint": "users/{userId}",
+    "urlParameters": {
+      "userId": "123"
+    },
+    "parameters": {
+      "count": "100"
+    }
+  },
+  {
+    "batch": true,
+    "type": "POST",
+    "endpoint": "products",
+    "parameters": {
+      "Name": "Sample Product",
+      "Price": 19.99
+    }
+  },
+  {
+    "batch": false,
+    "type": "GET",
+    "endpoint": "orders/{orderId}",
+    "urlParameters": {
+      "orderId": "456"
+    },
+    "parameters": {
+      "count": "50"
+    }
+  }
+]

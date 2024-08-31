@@ -1,0 +1,42 @@
+[
+  {
+    "batch": true,
+    "type": "GET",
+    "endpoint": "users.json",
+    "parameters": {
+      "last_name": "smith"
+    }
+  },
+  {
+    "batch": true,
+    "type": "GET",
+    "endpoint": "users.json",
+    "parameters": {
+      "limit": 100
+    }
+  },
+  {
+    "batch": true,
+    "type": "GET",
+    "endpoint": "users.json",
+    "parameters": {
+      "last_name": "smith"
+    }
+  },
+  {
+    "batch": false,
+    "type": "POST",
+    "endpoint": "payments.json",
+    "parameters": {
+      "payment_amount": 19.99
+    }
+  },
+  {
+    "batch": false,
+    "type": "GET",
+    "endpoint": "loans.json",
+    "parameters": {
+      "count": "50"
+    }
+  }
+]
