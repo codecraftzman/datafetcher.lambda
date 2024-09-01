@@ -35,3 +35,5 @@ D:\1. Ibex Connect\NET8\AWS Lambda\APIDataFetcher\bin\Debug\net8.0\Microsoft.Ext
 D:\1. Ibex Connect\NET8\AWS Lambda\APIDataFetcher\obj\Debug\net8.0\APIDataFetcher.csproj.AssemblyReference.cache
 D:\1. Ibex Connect\NET8\AWS Lambda\APIDataFetcher\obj\Debug\net8.0\APIDataF.8DDDD912.Up2Date
 D:\1. Ibex Connect\NET8\AWS Lambda\APIDataFetcher\bin\Debug\net8.0\endpoints.json
+D:\1. Ibex Connect\NET8\AWS Lambda\APIDataFetcher\bin\Debug\net8.0\endpoints.sample.json
+D:\1. Ibex Connect\NET8\AWS Lambda\APIDataFetcher\obj\Debug\net8.0\APIDataFetcher.sourcelink.json

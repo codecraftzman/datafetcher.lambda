@@ -12,7 +12,7 @@ var serviceProvider = new ServiceCollection()
                 .AddHttpClient<ApiClient>((serviceProvider, client) =>
                 {
                     var options = serviceProvider.GetRequiredService<IOptions<ApiClientOptions>>();
-                    client.BaseAddress = new Uri("https://my.api.mockaroo.com/"); //Replace actual Base address
+                    client.BaseAddress = new Uri("https://my.api.mockaroo.com/"); //Replace with your actual Base address
                 })
                 .Services
                 .Configure<ApiClientOptions>(options =>
@@ -54,7 +54,7 @@ try
     // Simulate Lambda event
     var s3Event = new Amazon.Lambda.S3Events.S3Event();
     var context = new TestLambdaContext();
-    await lambdaHandler!.HandleRequest(s3Event, context);
+    await lambdaHandler!.HandleRequest(s3Event, context, "endpoints.json");
 }
 catch (Exception ex)
 {

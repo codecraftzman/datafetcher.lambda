@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APIDataFetcher")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e152c661853e9dd9a74d4897896cc8cfb8baf48")]
 [assembly: System.Reflection.AssemblyProductAttribute("APIDataFetcher")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APIDataFetcher")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,6 +1,6 @@
 [
   {
-    "batch": true,
+    "batch": 1,
     "type": "GET",
     "endpoint": "users.json",
     "parameters": {

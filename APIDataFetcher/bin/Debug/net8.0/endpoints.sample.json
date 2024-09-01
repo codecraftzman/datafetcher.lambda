@@ -1,6 +1,6 @@
 [
   {
-    "batch": 1,
+    "batch": true,
     "type": "GET",
     "endpoint": "users/{userId}",
     "urlParameters": {

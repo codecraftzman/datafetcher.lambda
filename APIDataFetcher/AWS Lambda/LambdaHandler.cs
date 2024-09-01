@@ -2,30 +2,32 @@ using Amazon.Lambda.Core;
 using Amazon.Lambda.S3Events;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
+using System.IO;
 
 public class LambdaHandler
 {
     private readonly DataFetcher _dataFetcher;
     private readonly S3Uploader _s3Uploader;
     private readonly ILogger<LambdaHandler> _logger;
+    private readonly EndpointProcessor _endpointProcessor;
 
-    public LambdaHandler(DataFetcher dataFetcher, S3Uploader s3Uploader, ILogger<LambdaHandler> logger)
+    public LambdaHandler(DataFetcher dataFetcher, S3Uploader s3Uploader, ILogger<LambdaHandler> logger, EndpointProcessor endpointProcessor)
     {
         _dataFetcher = dataFetcher;
         _s3Uploader = s3Uploader;
         _logger = logger;
+        _endpointProcessor = endpointProcessor;
     }
 
-    public async Task HandleRequest(S3Event s3Event, ILambdaContext context)
+    public async Task HandleRequest(S3Event s3Event, ILambdaContext context, string filePath)
     {
         try
         {
-            // Example: Fetch data and upload to S3
-            var data = await _dataFetcher.FetchDataInParallel(new List<string> { "endpoint1", "endpoint2" }, new Dictionary<string, string> { { "param", "value" } });
-            using (var stream = new MemoryStream(System.Text.Encoding.UTF8.GetBytes(string.Join("\n", data))))
-            {
-                await _s3Uploader.UploadToS3Async("your-bucket-name", "your-key", stream);
-            }
+            // Example: Process endpoints from the JSON file and upload results to S3
+            string bucketName = "your-bucket-name";
+            string keyPrefix = "your-key-prefix";
+
+            //await _endpointProcessor.ProcessEndpointsAsync(filePath, bucketName, keyPrefix);
         }
         catch (Exception ex)
         {
